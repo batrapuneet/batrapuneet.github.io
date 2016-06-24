@@ -52,16 +52,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 <div style="width:90%">
 <ul id='mycarousel'>
 <li>
-	<div style="background:url(http://design.girnarsoft.com/syed/slickslider/images/renu-car.jpg) right 0px bottom 0px/156px auto no-repeat; height:100%; width:100%;">
+	<div style="background:url(http://design.girnarsoft.com/syed/slickslider/images/renu-car.jpg) right 0px bottom 0px/156px auto no-repeat; height:100%; width:100%;" onload="fun(this);">
 		<div>
-				<h3>Renault LODGY</h3>
+				<h3>Renault</h3>
 		</div>
 	</div>
 </li>
 <li>
-	<div style="background:url(http://design.girnarsoft.com/syed/slickslider/images/renu-car.jpg) right 0px bottom 0px/156px auto no-repeat; height:100%; width:100%;">
+	<div style="background:url(http://design.girnarsoft.com/syed/slickslider/images/renu-car.jpg) right 0px bottom 0px/156px auto no-repeat; height:100%; width:100%;" onload="fun(this);">
 		<div>
-				<h3>Renault LODGY</h3>
+				<h3>Renault L</h3>
 		</div>
 	</div>
 </li>
@@ -72,12 +72,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 <script>
 
 	$(document).ready(function () {
+	
 		$("#mycarousel").gsp_carousel({
 			item:1,
 			pager:false
 		});
 		//$("#carousel").css("height","100%");
 	});
+	
+	function fun(ref){
+	console.log("here");
+		$(ref).css("width","100%");
+	}
 	
 </script>
 <script>
