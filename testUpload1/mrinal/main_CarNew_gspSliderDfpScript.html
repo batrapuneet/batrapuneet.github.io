@@ -12,7 +12,7 @@ console.log(iframe_parent_div_id);
 var ad_parent_div = parent_Document.getElementById(iframe_parent_div_id+'-n');
 console.log("ad_parent_div.parent "+ad_parent_div);
 console.log(ad_parent_div.offsetWidth);
-//ad_parent_div.setAttribute('style',"max-width:300px; float:left;width:300px; height:250px;");
+ad_parent_div.setAttribute('style',"max-width:300px; float:left;width:300px; height:250px;");
 var parent_width=ad_parent_div.offsetWidth;
 
 var inner_iframe = parent_Document.createElement("iframe");
@@ -26,7 +26,7 @@ inner_iframe.setAttribute('frameborder',0);
 
 if(typeof ad_parent_div === 'undefined'){
 }else{
-       // iframe_node.parentNode.removeChild(iframe_node);
+    iframe_node.parentNode.removeChild(iframe_node);
 	ad_parent_div.appendChild(inner_iframe);
 	//ad_parent_div.removeChild(ad_parent_div.firstChild);
 	}
