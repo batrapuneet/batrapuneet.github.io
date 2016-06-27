@@ -2,14 +2,14 @@
 <script type="text/javascript">
 
 var parent_Document = parent.document;
-var ifram_id = parent.window.frames[window.name].name;
-console.log(ifram_id);
-var iframe_node=parent_Document.getElementById(ifram_id);
-console.log(iframe_node);
-var iframe_parent_div_id = iframe_node.parentNode.id;
-console.log(iframe_parent_div_id);
+//var ifram_id = parent.window.frames[window.name].name;
+//console.log(ifram_id);
+//var iframe_node=parent_Document.getElementById(ifram_id);
+//console.log(iframe_node);
+//var iframe_parent_div_id = iframe_node.parentNode.id;
+//console.log(iframe_parent_div_id);
 
-var ad_parent_div = parent_Document.getElementById(iframe_parent_div_id+'-n');
+var ad_parent_div = parent_Document.getElementById('div-gpt-ad-1371888607161-0-n');
 console.log(ad_parent_div);
 console.log(ad_parent_div.offsetWidth);
 var parent_width=ad_parent_div.offsetWidth;
@@ -22,7 +22,7 @@ inner_iframe.setAttribute('frameborder',0);
 
 if(typeof ad_parent_div === 'undefined'){
 }else{
-        iframe_node.parentNode.removeChild(iframe_node);
+        //iframe_node.parentNode.removeChild(iframe_node);
 	ad_parent_div.appendChild(inner_iframe);
 	//ad_parent_div.removeChild(ad_parent_div.firstChild);
 	}
