@@ -10,24 +10,19 @@ var iframe_parent_div_id = iframe_node.parentNode.id;
 console.log(iframe_parent_div_id);
 
 var ad_parent_div = parent_Document.getElementById(iframe_parent_div_id+'-n');
-console.log("ad_parent_div.parent "+ad_parent_div);
+console.log(ad_parent_div);
 console.log(ad_parent_div.offsetWidth);
-//ad_parent_div.setAttribute('width','0');
-//ad_parent_div.setAttribute('style',"max-width:300px; float:left; width:300px;");
 var parent_width=ad_parent_div.offsetWidth;
 
 var inner_iframe = parent_Document.createElement("iframe");
 inner_iframe.setAttribute('src','https://batrapuneet.github.io/testUpload1/mrinal/main_CarNew_gspSlider.html');
-console.log("parent_width "+parent_width);
-inner_iframe.setAttribute('width','100%');
-//inner_iframe.setAttribute('style',"max-width:300px; float:left; display:block;");
-//console.log(inner_iframe.getAttribute('style'));
+inner_iframe.setAttribute('width',parent_width+'px');
 inner_iframe.setAttribute('height','250px');
 inner_iframe.setAttribute('frameborder',0);
 
 if(typeof ad_parent_div === 'undefined'){
 }else{
-    iframe_node.parentNode.removeChild(iframe_node);
+        iframe_node.parentNode.removeChild(iframe_node);
 	ad_parent_div.appendChild(inner_iframe);
 	//ad_parent_div.removeChild(ad_parent_div.firstChild);
 	}
