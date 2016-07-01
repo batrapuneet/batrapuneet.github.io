@@ -32,7 +32,6 @@ a, a:hover{ text-decoration: none; outline: none;}
 </head>
     
 <body itemscope itemtype="https://schema.org/Webpage" class="body">
-    
 <div class=cd-page>
   <div class=cd-main>
          <div class="cloudcube">
@@ -51,10 +50,23 @@ a, a:hover{ text-decoration: none; outline: none;}
          </div>
    </div> 
 </div>
-   
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+
 <script>
+function initiliseJquery(){
+	var jqScript=document.createElement("script");
+	jqScript.src="https://code.jquery.com/jquery-1.12.4.min.js";
+	document.body.appendChild(jqScript);
+	jqScript.addEventListener("load", initiliseSlick);
+}
+
+function initiliseSlick(){
+	console.log("initiliseSlick called");
+	var slickScript=document.createElement("script");
+	slickScript.src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js";
+	document.body.appendChild(slickScript);
+	slickScript.addEventListener("load", initilise);
+}
+initiliseJquery();
 $('.compare_slider').slick({dots:false,centerMode: false, centerPadding: '0px', slidesToShow: 3, navigation: false, autoplay: false, infinite: false, arrows: false, autoplaySpeed: 1500, responsive: 
 	 [
 		{ breakpoint: 768, settings: { slidesToShow:2}
