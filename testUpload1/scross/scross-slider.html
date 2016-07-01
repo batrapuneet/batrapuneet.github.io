@@ -6,7 +6,6 @@
     
 <style type="text/css">
 @charset "utf-8";@font-face{font-family:robotoregular;src:url(https://static.cardekho.com/html/fonts/Roboto-Regular-webfont.eot);src:url(https://static.cardekho.com/html/fonts/Roboto-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(https://static.cardekho.com/html/fonts/Roboto-Regular-webfont.woff) format('woff'),url(https://static.cardekho.com/html/fonts/Roboto-Regular-webfont.ttf) format('truetype'),url(https://static.cardekho.com/html/fonts/Roboto-Regular-webfont.svg#robotoregular) format('svg');font-weight:400;font-style:normal}
- 
 .body {background-color: #e5e5e5; padding: 0px; margin: 0px;}
 img {height: auto;max-width: 100%;outline: 0 none;}
 a, a:hover{ text-decoration: none; outline: none;}
@@ -29,9 +28,12 @@ a, a:hover{ text-decoration: none; outline: none;}
 .cloudcube{background: #fff; height: 250px;}
 .scrossccar{color:#999;line-height:1;font-size:12px;text-transform:none; padding:6px 0 0 15px;font-family:robotoregular;}
 </style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
     
 <body itemscope itemtype="https://schema.org/Webpage" class="body">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
  <div class="cloudcube">
       <div class="scrossccar">Sponsored</div> 
       <div class="compare_slider cd-slider">
@@ -47,13 +49,6 @@ a, a:hover{ text-decoration: none; outline: none;}
        </div>
  </div>
 <script>
-function initiliseJquery(){
-	var jqScript=document.createElement("script");
-	jqScript.src="https://code.jquery.com/jquery-1.12.4.min.js";
-	document.body.appendChild(jqScript);
-	jqScript.addEventListener("load", initiliseSlick);
-}
-
 function initiliseSlick(){
 	console.log("initiliseSlick called");
 	var slickScript=document.createElement("script");

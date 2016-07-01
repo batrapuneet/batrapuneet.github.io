@@ -1,0 +1,48 @@
+<html>
+<head>
+
+<style>body{font-family:robotoregular;font-size:14px;font-weight:400}.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9{min-height:1px;padding-left:15px;padding-right:15px;position:relative;float:left}.col-12{width:100%}.outer-ad-ctr{background:#fff;margin:20px 0;padding-bottom:6px}.heading-ads{margin:10px 0 5px}.overflow-slider{width:100%;overflow-x:auto}.overflow-slider::-webkit-scrollbar{width:0!important}.overflow-slider .ads-img-ctr{display:inline-block;margin-right:12px;width:240px;position:relative}.overflow-slider .ads-img-ctr:first-child{margin-left:15px}.overflow-slider .ads-img-ctr:last-child{margin-right:0}.overflow-slider .ads-img{position:relative;float:left;cursor:pointer}.overflow-slider .ads-img:before{content:"";display:block;position:absolute;top:0;bottom:5px;left:0;right:0;background:-moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%);background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%);background:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0)}.overflow-slider .ads-img img{width:100%;height:155px}.overflow-slider .ad-img-caption{background:rgba(0,0,0,0);bottom:5px;color:#fff;font-size:14px;left:10px;right:10px;line-height:18px;position:absolute;text-transform:capitalize;font-weight:700}.slide-width{display:inline-block}</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        // sponsored section
+        var countSlider = $('.ads-img-ctr').length;
+        var sliderWidth = $('.ads-img-ctr').outerWidth(true) ;
+        var fullWidthSlider = countSlider * sliderWidth;
+        $('.slide-width').css('width',fullWidthSlider-30);
+
+        $(window).resize(function(){
+        var countSlider = $('.ads-img-ctr').length;
+        var sliderWidth = $('.ads-img-ctr').outerWidth(true) ;
+        var fullWidthSlider = countSlider * sliderWidth;
+        $('.slide-width').css('width',fullWidthSlider-30);	
+        });
+    });
+    </script>
+</head>
+<body><div class="outer-ad-ctr">
+    <div class="ads-ctr col-12">
+        <div class="heading-ads">Sponsored</div>
+    </div>
+    <div class="overflow-slider">
+        <div class="slide-width">
+            <a class="ads-img-ctr" href="#" rel="nofollow">
+                <div class="ads-img">
+                    <img src="https://images.cardekho.com/images/uploadimages/1464873699175/240x155-02.jpg" alt="img">
+                </div>
+            </a>
+            <a class="ads-img-ctr" href="#" rel="nofollow">
+                <div class="ads-img">
+                    <img src="https://images.cardekho.com/images/uploadimages/1464873699841/240x155-04.jpg" alt="img">
+                </div>
+            </a>
+            <a class="ads-img-ctr" href="#" rel="nofollow">
+                <div class="ads-img">
+                    <img src="https://images.cardekho.com/images/uploadimages/1464873787132/240x155-01.jpg" alt="img">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+</body></html>
+
