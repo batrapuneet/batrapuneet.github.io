@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    
+<style type="text/css">
+@charset "utf-8";@font-face{font-family:robotoregular;src:url(https://static.cardekho.com/html/fonts/Roboto-Regular-webfont.eot);src:url(https://static.cardekho.com/html/fonts/Roboto-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(https://static.cardekho.com/html/fonts/Roboto-Regular-webfont.woff) format('woff'),url(https://static.cardekho.com/html/fonts/Roboto-Regular-webfont.ttf) format('truetype'),url(https://static.cardekho.com/html/fonts/Roboto-Regular-webfont.svg#robotoregular) format('svg');font-weight:400;font-style:normal}
+ 
+.body {background-color: #e5e5e5; padding: 0px; margin: 0px;}
+img {height: auto;max-width: 100%;outline: 0 none;}
+a, a:hover{ text-decoration: none; outline: none;}
+.slick-slider{position: relative; display: block; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-user-select: none;  -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -khtml-user-select: none;     -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent;}
+.slick-list{ position: relative; display: block; overflow: hidden; margin: 0; padding: 0; }
+.slick-list:focus{outline: none; }
+.slick-list.dragging {cursor: pointer; cursor: hand;}
+.slick-slider .slick-track,.slick-slider .slick-list{ -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+.slick-track {position: relative; top: 0; left: 0; display: block;}
+.slick-track:before,.slick-track:after {display: table; content: '';}
+.slick-track:after {clear: both;}
+.slick-loading .slick-track {visibility: hidden;}
+.slick-slide{ display: none; float: left; height: 100%; min-height: 1px;}
+.slick-slide.dragging img{ pointer-events: none;}
+.slick-initialized .slick-slide{ display: block;}
+.slick-loading .slick-slide{visibility: hidden;}
+.slick-slide img {display: block;width: 100%;}
+.cd-slider .slick-list{padding:0 15px!important}
+.cd-slider .slide-sec{margin:7px 6px 0px 0;border:none;border-radius:5px;}
+.cloudcube{background: #fff; height: 250px;}
+.scrossccar{color:#999;line-height:1;font-size:12px;text-transform:none; padding:6px 0 0 15px;font-family:robotoregular;}
+</style>
+</head>
+    
+<body itemscope itemtype="http://schema.org/Webpage" class="body">
+    
+<div class=cd-page>
+  <div class=cd-main>
+         <div class="cloudcube">
+              <div class="scrossccar">Sponsored</div> 
+              <div class="compare_slider cd-slider">
+                    <div class="slide-sec radius5">
+                        <a href="http://goo.gl/9eVwdB" target="_blank"><img src="http://design.girnarsoft.com/syed/slickslider/images/290x220_slide1.jpg" alt="scross"></a>
+                    </div>
+                    <div class="slide-sec radius5">
+                        <a href="http://goo.gl/9eVwdB" target="_blank"><img src="http://design.girnarsoft.com/syed/slickslider/images/290x220_slide2.jpg" alt="scross"></a>
+                    </div>
+                  <div class="slide-sec radius5">
+                        <a href="http://goo.gl/9eVwdB" target="_blank"><img src="http://design.girnarsoft.com/syed/slickslider/images/290x220_slide3.jpg" alt="scross"></a>
+                </div>
+               </div>
+         </div>
+   </div> 
+</div>
+   
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://kenwheeler.github.io/slick/slick/slick.js"></script>
+<script>
+$('.compare_slider').slick({dots:false,centerMode: false, centerPadding: '0px', slidesToShow: 3, navigation: false, autoplay: false, infinite: false, arrows: false, autoplaySpeed: 1500, responsive: 
+	 [
+		{ breakpoint: 768, settings: { slidesToShow:2}
+		},
+		
+		{ breakpoint: 481, settings: { slidesToShow:1}
+		}
+	  ]
+});    
+</script>
+
+</body>
+</html>
