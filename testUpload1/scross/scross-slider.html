@@ -66,16 +66,19 @@ function initiliseSlick(){
 	document.body.appendChild(slickScript);
 	slickScript.addEventListener("load", initilise);
 }
-initiliseJquery();
-$('.compare_slider').slick({dots:false,centerMode: false, centerPadding: '0px', slidesToShow: 3, navigation: false, autoplay: false, infinite: false, arrows: false, autoplaySpeed: 1500, responsive: 
-	 [
-		{ breakpoint: 768, settings: { slidesToShow:2}
-		},
+function initilise(){
+	$('.compare_slider').slick({dots:false,centerMode: false, centerPadding: '0px', slidesToShow: 3, navigation: false, autoplay: false, infinite: false, arrows: false, autoplaySpeed: 1500, responsive: 
+		 [
+			{ breakpoint: 768, settings: { slidesToShow:2}
+			},
 		
-		{ breakpoint: 481, settings: { slidesToShow:1}
-		}
-	  ]
-});    
+			{ breakpoint: 481, settings: { slidesToShow:1}
+			}
+		  ]
+	});
+}
+initiliseJquery();
+    
 </script>
 
 </body>
