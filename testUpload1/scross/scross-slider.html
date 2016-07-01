@@ -28,7 +28,6 @@ a, a:hover{ text-decoration: none; outline: none;}
 .cloudcube{background: #fff; height: 250px;}
 .scrossccar{color:#999;line-height:1;font-size:12px;text-transform:none; padding:6px 0 0 15px;font-family:robotoregular;}
 </style>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
     
 <body itemscope itemtype="https://schema.org/Webpage" class="body">
@@ -49,6 +48,14 @@ a, a:hover{ text-decoration: none; outline: none;}
        </div>
  </div>
 <script>
+function initiliseJquery(){
+	console.log("initiliseSlick called");
+	var slickScript=document.createElement("script");
+	slickScript.src="https://code.jquery.com/jquery-1.12.4.min.js";
+	document.body.appendChild(slickScript);
+	slickScript.addEventListener("load", initiliseSlick);
+}
+
 function initiliseSlick(){
 	console.log("initiliseSlick called");
 	var slickScript=document.createElement("script");
