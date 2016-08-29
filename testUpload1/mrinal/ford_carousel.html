@@ -1,0 +1,106 @@
+<script type="text/javascript" src="http://centraljs.girnarsoft.com/jquery/src/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="http://centraljs.girnarsoft.com/lazyload/src/gsp_lazyload-1.0.0.js"></script>
+<script type="text/javascript" src="http://centraljs.girnarsoft.com/carousel/src/gsp_carousel-1.1.0.js" ></script>
+<link href="http://centraljs.girnarsoft.com/carousel/css/gsp_carousel.css" rel="stylesheet" type="text/css"/>
+
+ <div id="normal" class="cloudcube">
+ 		<!--  <div class="car_heading ">
+			  <div class="fordcar">FORD ECOSPORT <span class="sponsrd">Sponsored</span></div> 
+			  <div><img src="http://design.girnarsoft.com/syed/slickslider/images/renult-logo.png" alt="logo"></div> 
+		  </div> -->
+		  <div class="car_heading clearfix">
+               
+					<div>
+                        <i class="logo_brnd"></i>
+				        <div class="renulaunccar">Ford Ecosport<span class="sponsrd">Sponsored</span></div>
+                    </div>    
+              </div>
+<div class="clearfix" style="margin:0 auto;">
+    <ul id="image-gallery" class="gallery">
+        <li class="fordImg"><img class='w100' data-gsll-src="https://images.cardekho.com/images/uploadimages/1472198584917/325x210_S_04.jpg" class="ford_img"/>
+        </li>
+        <li class="fordImg"><img class='w100' data-gsll-src="https://images.cardekho.com/images/uploadimages/1472198584917/325x210_S_01.jpg" class="ford_img"/>
+        </li>
+        <li class="fordImg"><img class='w100' data-gsll-src="https://images.cardekho.com/images/uploadimages/1472198585350/325x210_S_03.jpg" class="ford_img" />
+        </li>
+        <li class="fordImg"><img class='w100' data-gsll-src="https://images.cardekho.com/images/uploadimages/1472198585350/325x210_S_02.jpg" class="ford_img" />
+        </li>
+    </ul>
+</div>
+</div>
+<style type="text/css">
+
+    #image-gallery{
+        height:210px !important;
+    }
+   #image-gallery  li img.w100{
+        width:100px !important;
+    }
+    .wp100{
+        width:100% !important;
+        height:210px !important;
+    }
+
+	#carousel li {
+	padding: 75px 0;
+    background-color: #007095;
+    color: #FFF;
+    text-align: center;
+}
+.car_heading.clearfix {
+/*    width: 100%;*/
+}
+.logo_brnd {
+    height: 28px;
+    width: 28px;
+    background: url("http://design.girnarsoft.com/syed/slickslider2/images/Suz-logo.png") no-repeat 0 0/100% auto;
+    display: inline-block;
+        margin-left: 15px;
+}
+.renulaunccar {
+    color: #000;
+    line-height: 1;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.renulaunccar .sponsrd {
+    font-size: 11px;
+    padding-top: 5px;
+    color: #000;
+    display: block;
+    text-transform: none;
+}
+.car_heading img{width:24px; height: 30px; float: right; margin:-5px 15px 0 0;}
+.cloudcube{background: #f7b71f;padding-top:15px;}
+.fordcar .sponsrd{font-size:11px;padding-top:5px;color:#fff; display:block; text-transform: none;}
+.ford_img{border-radius:20px;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+    $("#image-gallery").gsp_carousel({
+        item:1,
+        showUpcoming:true,
+        upcomingPercent:10,
+        slideMargin:10,
+        onSliderLoad:function(){
+            $('#image-gallery li img').removeClass('w100').addClass('wp100');
+        }
+    });
+
+});
+setTimeout(function(){
+    $( "li" ).find('a').remove();
+$('.gscr_lSNext').css('display','none');
+$('.gscr_lSPrev').css('display','none');
+},1000);
+    jQuery("body").on("click", function(e) {
+setTimeout(function(){
+    $( "li" ).find('a').remove();
+$('.gscr_lSNext').css('display','none');
+$('.gscr_lSPrev').css('display','none');
+},1000);
+});
+</script>
