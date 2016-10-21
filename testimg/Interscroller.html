@@ -1,0 +1,156 @@
+<div id="gptPushBanner" itemscope itemtype="http://schema.org/WPAdBlock" >
+	<div id="gptpushmainbox" style="margin:auto; width:970px;">
+		<div id="showPushBannerBtn"></div>
+		<div id="hidePushBannerBtn" onclick="hidePagePusherAdd();" style="cursor: pointer; background: url(https://static.cardekho.com/html/ads/common/images/hide_ad.png) no-repeat; width: 110px; height: 32px; position:absolute; margin-left:860px; display:none; z-index:100;"></div>
+		<div id="gptpushadcontainer" style="margin:auto; width:970px; clear:both;">
+			<div id="gptPushPusherBigAd" style="display:none; margin:auto">
+				<img id="gptbigbanner" src="http://kelliegreenedesign.com/wp-content/uploads/2015/08/KNOW-970x415-elevate-2.jpg" width="970" height="415" border="0" style="cursor: pointer;">
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+
+<script type='text/javascript'>
+	var parent_Document = parent.document;
+	var ifram_id = parent.window.frames[window.name].name;
+	var iframe_parent_div_id = parent_Document.getElementById(ifram_id).parentNode.id;
+	var ifram_content = document.getElementById("gptPushBanner").innerHTML;
+
+	/*var scriptElement = parent_Document.createElement('script');
+	scriptElement.setAttribute('type', 'text/javascript');
+	scriptElement.setAttribute('src', 'Javascript.js');*/
+
+	var scriptElement = parent_Document.createElement('script');
+	scriptElement.setAttribute('type', 'text/javascript');
+scripts="var pagePusherAddOpen = false;"+
+"var pagePushShowAddRunning = false;"+
+"var pagePushHideAddRunning = false;"+
+"var interScrollerExpandOnce = false;"+
+
+"function showPagePusherAdd() {"+
+	"if(!pagePushShowAddRunning && !pagePusherAddOpen){"+
+		"document.getElementById(\"gptpushmainbox\").parentNode.parentNode.parentNode.parentNode.style.display = \"\";"+
+		"pagePushShowAddRunning = true;"+
+		"document.getElementById(\"showPushBannerBtn\").style.display = \"\";"+
+		"document.getElementById(\"hidePushBannerBtn\").style.display = \"none\";"+
+
+		"document.getElementById(\"gptpushadcontainer\").style.height = \"0px\";"+
+		"document.getElementById(\"gptPushPusherBigAd\").style.display = \"\";"+
+		"$( \"#gptpushadcontainer\" ).animate({"+
+			"height: \"250\" "+
+		"}, 2500, function() {"+
+		"	document.getElementById(\"showPushBannerBtn\").style.display = \"none\";"+
+		"	document.getElementById(\"hidePushBannerBtn\").style.display = \"\";"+
+		"	pagePusherAddOpen = true;"+
+		"	pagePushShowAddRunning = false;"+
+		"});"+
+	"}"+
+"}"+
+
+"function hidePagePusherAdd() {"+
+	"if(!pagePushHideAddRunning){"+
+		"pagePushHideAddRunning = true;"+
+		"$(\"#gptpushadcontainer\").animate({"+
+		"	height: \"0px\""+
+		"}, 2500, function() {"+
+			"document.getElementById(\"showPushBannerBtn\").style.display = \"\";"+
+			"document.getElementById(\"hidePushBannerBtn\").style.display = \"none\";"+
+			"document.getElementById(\"gptPushPusherBigAd\").style.display = \"none\";"+
+			"pagePusherAddOpen = false;"+
+			"pagePushHideAddRunning = false;"+
+		"	document.getElementById(\"gptpushmainbox\").parentNode.parentNode.parentNode.parentNode.style.display = \"none\";"+
+		"});"+
+	"}"+
+"}"+
+
+"function getCookieAd(adName) {"+
+	"cName = \"\";"+
+	"var pCOOKIES = new Array();"+
+	"pCOOKIES = document.cookie.split(\"; \");"+
+	"for (var bb = 0; bb < pCOOKIES.length; bb++) {"+
+		"var NmeVal = new Array();"+
+		"NmeVal = pCOOKIES[bb].split(\"=\");"+
+	"if (NmeVal[0] == adName) {"+
+		"	cName = unescape(NmeVal[1]);"+
+	"	}"+
+	"}"+
+	"return cName;"+
+"}"+
+
+"function Set_CookieAd(C, E, A, H, D, G) {"+
+	"var B = new Date();"+
+	"B.setTime(B.getTime());"+
+	"if (A) {"+
+	"	A = A * 1000 * 60 * 60 * 1;"+
+	"}"+
+	"var F = new Date(B.getTime() + (A));"+
+	"document.cookie = C + \"=\" + escape(E) + ((A) ? \";expires=\" + F.toGMTString() : \"\") + ((H) ? \";path=\" + H : \"\") + ((D) ? \";domain=\" + D : \"\") + ((G) ? \";secure\" : \"\");"+
+"}"+
+
+"function initializeSideKick(){"+
+	"setTimeout(function() {	$(\".main_div_btm_ad_section\").animate({right:\"0px\"},1000);	}, 1000);"+
+	"setTimeout(function() {$(\".arr_hide\").animate({right:\"0px\"},1000);	}, 3000);"+
+
+   
+	"$(\"#arr_btn\").click(function(){"+
+		"if($(\"#arr_btn\").hasClass(\"arr_hide\"))"+
+		"{"+
+			"$(\".main_div_btm_ad_section\").animate({right:\"-150px\"},700);"+
+			"$(\"#arr_btn\").removeClass(\"arr_hide\");"+
+			"setTimeout(function() {$(\"#arr_btn\").addClass(\"arr_show\");	}, 1000);"+
+		"}"+
+		"else{"+
+			"$(\".main_div_btm_ad_section\").animate({right:\"0px\"},700);"+
+		"	$(\"#arr_btn\").removeClass(\"arr_show\").addClass(\"arr_hide\");"+
+		"}"+
+	"});"+
+"}"+
+
+"function initInterScrollerAd(){"+
+	"var element_position = $(\"#gptpushmainbox\").offset().top;"+	
+	"var screen_height = $(window).height();"+
+	"var activation_offset = 0.25;"+
+	"var activation_point = element_position - (screen_height * activation_offset);"+
+	"document.getElementById(\"gptpushmainbox\").parentNode.parentNode.parentNode.parentNode.style.display = \"none\";"+
+	"$(window).on(\"scroll\", function() {"+
+		"if(!interScrollerExpandOnce){"+
+			"var y_scroll_pos = window.pageYOffset;"+
+		"if(y_scroll_pos > activation_point){"+
+		       " interScrollerExpandOnce = true;"+
+			"	showPagePusherAdd();"+
+		  "	}"+
+	"	}"+	    
+  "  });"+
+"}"+
+
+"setTimeout(function() {"+
+	"initInterScrollerAd();"+
+	"var pusherAdd = getCookieAd(\"pusherAdd\");"+
+"}, 1000);";
+
+
+scriptElement.innerHTML = scripts;
+
+
+	var scriptElement1 = parent_Document.createElement('script');
+	scriptElement1.setAttribute('type', 'text/javascript');
+	scriptElement1.setAttribute('src', 'jquery-2.1.3-merged.js');
+
+	var _inner_div = parent_Document.createElement("div");
+	_inner_div.innerHTML = ifram_content;
+	//var ad_parent_div = parent_Document.getElementById('Wraper');
+	var ad_parent_div = parent_Document.getElementById(iframe_parent_div_id + '-n');
+	if (typeof ad_parent_div === 'undefined') {} else {
+		//var toRemove = parent_Document.getElementById(ifram_id).parentNode.parentNode;
+		//toRemove.parentNode.removeChild(toRemove);
+		ad_parent_div.appendChild(_inner_div);
+		ad_parent_div.appendChild(scriptElement);
+		ad_parent_div.appendChild(scriptElement1);
+	}
+	//var ab = '%%CLICK_URL_UNESC%%';
+
+
+
+</script>
