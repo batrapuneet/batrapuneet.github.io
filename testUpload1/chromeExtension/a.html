@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/nfgiomdbklbajoehfoaiijdogmlacjha">
+    <style>
+        .cst-ad-slots {
+            display: block;
+            max-width: 100%;
+            text-align: center;
+            margin: 0 auto
+        }
+        .cst-ad-slots img {
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+    <script>
+        function installExtension() {
+            chrome.webstore.install('https://chrome.google.com/webstore/detail/nfgiomdbklbajoehfoaiijdogmlacjha', chromeExtInstallSucess, chromeExtInstallCancelled);
+        }
+
+        function chromeExtInstallSucess() {
+            console.log("1");
+        }
+
+        function chromeExtInstallCancelled() {
+            console.log("2");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="cst-ad-slots"><img src="https://images.cardekho.com/images/uploadimages/1477490100151/300x250.jpg" onclick="installExtension()" alt="Upgrade your chrome" /></div>
+</body>
+
+</html>
+
+
