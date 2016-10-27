@@ -1,6 +1,4 @@
-<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/nfgiomdbklbajoehfoaiijdogmlacjha">
@@ -18,16 +16,8 @@
     </style>
     <script>
         function installExtension() {
-            chrome.webstore.install('https://chrome.google.com/webstore/detail/nfgiomdbklbajoehfoaiijdogmlacjha', chromeExtInstallSucess, chromeExtInstallCancelled);
-        }
-
-        function chromeExtInstallSucess() {
-            console.log("1");
-        }
-
-        function chromeExtInstallCancelled() {
-            console.log("2");
-        }
+			chrome.webstore.install('https://chrome.google.com/webstore/detail/nfgiomdbklbajoehfoaiijdogmlacjha');
+		}
     </script>
 </head>
 
