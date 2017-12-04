@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>push down</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+    
+<script type="text/javascript" src="js/3deye.min.js"></script><br>
+</head>
+
+<body style="margin: 0px; padding: 0px;">
+    <div class="main_img">
+        <div class="ad_100px220">
+            
+            <div class="ad_1000px220">
+                <div class="logo">
+                    <img src="img/logo.png" alt=""/>
+                </div>
+                <ul class="nad_mlt_top">
+                    <li class="top_one_model_tab" title="Latest"><a href="#">XC60 FEATURES</a></li>
+                    <li class="top_three_model_tab" title="Comparison"><a href="#">WATCH TVC</a></li>
+                </ul>
+                <div class="left_side">
+                    <ul class="nad_mlt">
+                        <li class="one_model_tab active"  title="1st_model_tab"><a href="#"> <img src="img/logo_xc60.png"></a></li>
+                        <li class="two_model_tab" title="Popular"><a href="#">Panoramic moonroof</a></li>
+                        <li class="three_model_tab" title="Latest"><a href="#">LED Headlights</a></li>
+                        <li class="four_model_tab" title="Comparison"><a href="#">Powered Tailgate </a></li>
+                    </ul>
+                </div>
+                <div class="right_side">
+                    <div id="one_model_tab" class="toyota_native_1md" style="display:block; margin-left: -235px;">
+                        <div class="ad_content row-of-icons" style="width: 434px;">
+                            <span class="subtitle">Power without compromise</span>
+                            <span class="title">All-New Volvo XC60</span>
+                            <span class="paragraph">The XC60 Inscription offers a highly sophisticated expression of Scandinavian luxury.</span>
+                            <a href="#" class="clk_button">Know More</a>
+                        </div>
+                        <div class="sub_right_side">
+                            <img src="img/img_main.png">
+                        </div>
+                    </div>
+                    <div id="two_model_tab" class="toyota_native_1md" style="display:none;">
+                        <div class="ad_content">
+                            <span class="subtitle">Panoramic </span>
+                            <span class="title">Moonroof</span>
+                            <span class="paragraph">The XC60 Inscription offers a highly sophisticated<br> expression of Scandinavian luxury.</span>
+                            <a href="#" class="clk_button">Know More</a>
+                        </div>
+                        <div class="sub_right_side">
+                            <img src="img/img_01.png">
+                        </div>
+                    </div>
+                    <div id="three_model_tab" class="toyota_native_1md" style="display:none;">
+                        <div class="ad_content">
+                            <span class="subtitle">LED </span>
+                            <span class="title">Headlights</span>
+                            <span class="paragraph">The XC60 Inscription offers a highly sophisticated<br> expression of Scandinavian luxury.</span>
+                            <a href="#" class="clk_button">Know More</a>
+                        </div>
+                        <div class="sub_right_side">
+                            <img src="img/img_02.png">
+                        </div>
+                    </div>
+                    <div id="four_model_tab" class="toyota_native_1md" style="display:none;">
+                        <div class="ad_content">
+                            <span class="subtitle">Power</span>
+                            <span class="title">Tailgate</span>
+                            <span class="paragraph">The XC60 Inscription offers a highly sophisticated<br> expression of Scandinavian luxury.</span>
+                            <a href="#" class="clk_button">Know More</a>
+                        </div>
+                        <div class="sub_right_side">
+                            <img src="img/img_03.png">
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+				<div id="top_three_model_tab" class="toyota_native_1md" style="display:none; overflow:hidden;">
+                        <span class="back_btn" style="position: absolute; z-index: 9999; bottom:10px; left: 10px; display: block" onClick="stopVideo();"><img src="img/back.png" alt="" class="back_btn"/></span>
+                        <div class="video_01">
+                          
+                       		<div id="player"></div>
+                       		<script>
+								  // 2. This code loads the IFrame Player API code asynchronously.
+								  var tag = document.createElement('script');
+
+								  tag.src = "https://www.youtube.com/iframe_api";
+								  var firstScriptTag = document.getElementsByTagName('script')[0];
+								  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+								  // 3. This function creates an <iframe> (and YouTube player)
+								  //    after the API code downloads.
+								  var player;
+								  function onYouTubeIframeAPIReady() {
+									player = new YT.Player('player', {
+									  height: '100%',
+									  width: '100%',
+									  videoId: '2O5TPcKPEh8',
+									  events: {
+										'onReady': onPlayerReady,
+										'onStateChange': onPlayerStateChange
+									  },
+									playerVars: {
+										autohide:1,
+										mute:1,
+										controls:0,
+										autoplay:0,
+										showinfo:0
+									}
+									});
+								  }
+
+								  // 4. The API will call this function when the video player is ready.
+								  function onPlayerReady(event) {
+									//event.target.playVideo();
+								  }
+
+								  // 5. The API calls this function when the player's state changes.
+								  //    The function indicates that when playing a video (state=1),
+								  //    the player should play for six seconds and then stop.
+								  var done = false;
+								  function onPlayerStateChange(event) {
+									if (event.data == YT.PlayerState.PLAYING && !done) {
+									  //setTimeout(stopVideo, 5000);
+									  done = true;
+									}
+								  }
+								  function stopVideo() {
+									player.stopVideo();
+								  }
+							</script>
+                        </div>
+                        
+                    </div>
+            </div>
+         </div>
+    </div>
+<script>
+$(document).ready(function(){
+		setTimeout(function(){
+            //$(".ad_100px60").css({"height": "300"});
+            $(".drag, #demo").fadeIn();
+            //alert("shdsjkahdajsk");
+		}, 500);
+		setTimeout(function(){
+            $('.top_one_model_tab').trigger('click');
+		}, 8000);
+		
+        $("#demo").vc3dEye({
+            imagePath:"assets/", // the location where you’ve put the images.
+            totalImages:18, // the number of images you have.
+            imageExtension:"png" // the extension of the images. Make sure all the images have same extension.
+        });
+});
+	
+
+// color Ad
+
+$(document).ready(function(){
+    $('.color_nad_mlt li').click(function(){
+      $('.color_nad_mlt li.active').removeClass('active');
+      $(this).addClass('active');
+    });
+});
+    
+$(document).ready(function(){
+	$(".color_one_model_tab").click(function(){
+		$("#color_one_model_tab").show().siblings().hide();
+	});
+	$(".color_two_model_tab").click(function(){
+		$("#color_two_model_tab").show().siblings().hide();
+	});
+	$(".color_three_model_tab").click(function(){
+		$("#color_three_model_tab").show().siblings().hide();
+	});
+    $(".color_four_model_tab").click(function(){
+		$("#color_four_model_tab").show().siblings().hide();
+	});
+	
+   
+});    
+    
+// Native Ad
+
+$(document).ready(function(){
+    $('.nad_mlt_top li').click(function(){
+      $('.nad_mlt_top li.active').removeClass('active');
+      $(this).addClass('active');
+    });
+});
+$('.nad_mlt li:nth-child(1)').show().siblings().hide();   
+$(document).ready(function(){
+	$(".top_one_model_tab, .back_btn").click(function(){
+		$("#two_model_tab").show().siblings().hide();
+		$("#top_three_model_tab").hide();
+		$("#two_model_tab, .nad_mlt").show();
+		$(".two_model_tab, .top_one_model_tab").addClass('active').siblings().removeClass('active');
+		$('.nad_mlt li').show();
+		/*$('iframe').contents().find('video').each(function () 
+        {
+            this.currentTime = 0;
+            this.pause();
+        });*/
+	});
+	$(".top_two_model_tab").click(function(){
+		$("#top_two_model_tab").show().siblings().hide();
+	});
+	$(".top_three_model_tab").click(function(){
+		$("#top_three_model_tab").show()
+	});
+	
+   
+});
+    
+// Native Ad
+
+$(document).ready(function(){
+    $('.nad_mlt li').click(function(){
+      $('.nad_mlt li.active').removeClass('active');
+      $(this).addClass('active');
+    });
+});    
+
+$(document).ready(function(){
+	$(".one_model_tab").click(function(){
+		$("#one_model_tab").show().siblings().hide();
+		$('.nad_mlt li:nth-child(1)').show().siblings().hide();   
+	});
+	$(".two_model_tab").click(function(){
+		$("#two_model_tab").show().siblings().hide();
+	});
+	$(".three_model_tab").click(function(){
+		$("#three_model_tab").show().siblings().hide();
+	});
+	$(".four_model_tab").click(function(){
+		$("#four_model_tab").show().siblings().hide();
+	});
+    
+});
+
+$(document).ready(function(){
+$('.nad_gallery_list li').click(function(){
+  $('.nad_gallery_list li.active').removeClass('active');
+  $(this).addClass('active');
+});
+//disp("1st_model_tab");
+});
+
+// $("#nad_ext_gal, #nad_int_gal").hide();
+</script>
+<style>
+	#top_three_model_tab{width: 100%;z-index: 999;top: 0px;position: absolute;display: block;}
+</style>
+</body>
+</html>
